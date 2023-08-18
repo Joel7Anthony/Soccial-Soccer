@@ -1,24 +1,18 @@
-const players = (sequelize, type) => {
+const qualificationOctavos = (sequelize, type) => {
     return sequelize.define('players', {
         id: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        name: type.STRING,
-        lastname:type.STRING,
-        photo: type.STRING,
-        age: type.INTEGER, 
-        cedula: type.STRING,
-        typePlayer: type.STRING,
-        goalsMarked:type.INTEGER, 
+        status: type.STRING,
 
-        createPlayer: {
+        createQualificationOctavos: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatePlayer: {
+        updateQualificationOctavos: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -28,4 +22,4 @@ const players = (sequelize, type) => {
     })
 }
 
-module.exports = players
+module.exports = qualificationOctavos
