@@ -15,7 +15,8 @@ mysql.createConnection({
 })
 
 const usersModel = require('../models/user.model');
-
+const playersModel = require('../models/player.model');
+const teamsModel = require('../models/team.model');
 
 const sequelize = new Sequelize(
   'social_soccer_public',
@@ -46,8 +47,11 @@ sequelize.sync({ force: false })
     console.log("synchronized tables")
   })
 
-const users = usersModel(sequelize, Sequelize);
 
+  //sincronia//
+const users = usersModel(sequelize, Sequelize);
+const teams = teamsModel(sequelize, Sequelize);
+const players = playersModel(sequelize, Sequelize);
 
 
 //Relaciones 
@@ -56,5 +60,7 @@ const users = usersModel(sequelize, Sequelize);
 
 module.exports = {
   users,
+  teams,
+  players,   //Exportamos los modelos para usarlo en otros archivos
 
 }
