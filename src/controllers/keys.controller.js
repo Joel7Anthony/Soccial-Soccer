@@ -1,5 +1,5 @@
 const pool = require("../config/database");
-const users = require("../models/qualificationOctovo.model", "");
+const keys = require("../models/qualificationOctovo.model", "");
 const { isLoggedIn } = require('../lib/auth');
 const Keys = {};
 
