@@ -80,7 +80,8 @@ app.use((req, res, next) => {
 app.use(require('./routes'));
 app.use(require('./routes/authentication.routes'));
 app.use('/users',require('./routes/users.routes'));
-//app.use('/equipos',require('./router/equipo.router'))
+app.use('/teams',require('./routes/teams.routes'));
+
 
 
 

@@ -1,0 +1,24 @@
+
+<link rel="stylesheet" href="/css/cards.css">
+{{#each teams}}
+<div class="card-body">
+    <p>{{name}}</p>
+    <p>{{photo}}</p>
+    <p>{{series}}</p>
+    <p>{{initialst}}</p>
+    <p>{{description}}</p>
+    <p>{{mail}}</p>
+    <p>{{creation_date}}</p>
+    <p>{{main_color}}</p>
+    <p>{{secondary_color}}</p>
+    <p>{{phone}}</p>
+        <center>
+        <a href="/teams/delete-teams/{{id}}" class="danger">Eliminar</a>
+        <a href="/teams/edit-team/{{id}}" class="secondary">Editar</a>
+    </center>
+</div>    
+    {{else}}
+    <center <p>No hay registro guardados a un </p>
+        <a href="/teams"> Agrega uno haciendo click aqui</a>
+    </center>
+    {{/each}}
