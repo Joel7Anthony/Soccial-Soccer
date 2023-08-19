@@ -6,7 +6,11 @@ const Teams = {};
 
 Teams.getListTeams = async (req, res) => {
   const teams = await pool.query('SELECT * FROM  teams');
-    res.render('pages/team/list-teams', {teams});
+    res.render('Pages/team/list-teams', {teams});
+};
+
+Teams.getAddTeams = async (req, res) => {
+  res.render('pages/team/teams')
 };
 
 Teams.postTeam = async (req, res) => {

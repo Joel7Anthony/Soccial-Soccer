@@ -3,6 +3,7 @@ const router = express.Router();
 const teamsController = require('../controllers/teams.controller');
 
 router.get('/', teamsController.getListTeams);
+router.get('/add', teamsController.getAddTeams);
 router.post('/teams', teamsController.postTeam);
 router.get('/list-teams', teamsController.getListTeams);
 router.get('/delete-teams', teamsController.deleteTeam);

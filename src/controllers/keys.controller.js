@@ -5,13 +5,13 @@ const Keys = {};
 
 
 
-Keys.getListUsers =  async(req, res) => {
+Keys.getKeys =  async(req, res) => {
     //res.render("pages/users/list");
-    const users = await pool.query('SELECT * FROM  users');  
-    res.render('pages/users/list', {users})
+    const keys = await pool.query('SELECT * FROM  keys');  
+    res.render('pages/championship/keys', {keys})
 };
 
-Keys.postUsers = async (req, res) => {
+/*Keys.postKey = async (req, res) => {
     const { name, email, description } = req.body;
     const newUser = {
         name,
@@ -23,20 +23,20 @@ Keys.postUsers = async (req, res) => {
     res.redirect("/users/list-users");
 };
 
-Keys.deleteUser = async (req, res) => {
+Keys.deleteKey = async (req, res) => {
     const { id } = req.params;
     await pool.query("DELETE FROM users WHERE ID = ?", [id]);
     req.flash('success', 'Eliminado');
     res.redirect("/users/list-users");
-};
+};*/
 
-Keys.getUser = async (req, res) => {
+Keys.getKey = async (req, res) => {
     const { id } = req.params;
     const user = await pool.query('SELECT * FROM users WHERE id = ?', [id]);
     req.flash('success', 'bien');
     res.render('pages/users/edit', { user: user[0] });
 };
-Keys.updateUser = async (req, res) => {
+Keys.updateKey = async (req, res) => {
     const { id } = req.params;
     const { name, email, description } = req.body;
     const newUser = {
