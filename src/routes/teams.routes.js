@@ -12,5 +12,11 @@ router.get('/delete-teams/:id', isLoggedIn,teamsController.deleteTeam);
 router.get('/edit-teams/:id', isLoggedIn,teamsController.getTeam);
 router.post('/edit-teams/:id', isLoggedIn,teamsController.updateTeam);
 
+//views profile
+
+//router.get('/profile', isLoggedIn, profileController.getProfile);
+//router.post('/image-profile', isLoggedIn, profileController.postImageProfile);
+//router.post('/update-profile', isLoggedIn, profileController.updateImageProfile );
+
 
 module.exports = router;
