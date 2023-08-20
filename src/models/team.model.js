@@ -12,7 +12,7 @@ const teams = (sequelize, type) => {
         initials: type.STRING,
         description: type.STRING,
         mail: type.STRING,
-        creation_date: type.INTEGER,
+        creation_date: type.STRING,
         main_color: type.STRING,
         secondary_color: type.STRING,
         phone: type.INTEGER,

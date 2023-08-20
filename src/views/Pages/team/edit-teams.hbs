@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/teams.css">
             <div class="card-body">
-                    <form action="/teams/edit-teams/{{team.id}}" method="POST">
+                    <form action="/team/edit-teams/{{team.id}}" method="POST">
                     <div id="logo"></div>
                     <div id="title">Crear</div>
                     <div id="sub-title">Equipo a ser agregado</div>
@@ -16,18 +16,42 @@
                                 placeholder="Apellido del jugador"/>
                         </div>
                          <div id="inputBox">
-                            <label>Posición del Jugador</label>
-                            <input type="text" value="{{player.playerposition}}" class="form-control" name="playerposition"
+                            <label>Nueva categoria del Equipo</label>
+                            <input type="text" value="{{team.category}}" class="form-control" name="category"
                                 placeholder="Posición del Jugador" autofocus/>
                         </div>
                          <div id="inputBox">
-                            <label>Altura del jugador</label>
-                            <input type="text" value="{{player.playerheight}}" name="playerheight" class="form-control"
+                            <label>Nueva serie del Equipo</label>
+                            <input type="text" value="{{team.series}}" name="series" class="form-control"
                                 placeholder="Altura del jugador"/>
                         </div>
                          <div id="inputBox">
-                            <label>Edad del jugador</label>
-                             <input type="text" value="{{player.playerage}}"  name="playerage" class="form-control" placeholder="Edad del jugador"/>
+                            <label>Iniciales del Equipo</label>
+                             <input type="text" value="{{team.initials}}"  name="initials" class="form-control" placeholder="Edad del jugador"/>
+                        </div>
+                        <div id="inputBox">
+                            <label>Descripcion del Equipo</label>
+                             <input type="text" value="{{team.description}}"  name="description" class="form-control" placeholder="Edad del jugador"/>
+                        </div>
+                        <div id="inputBox">
+                            <label>Nuevo mail del Equipo</label>
+                             <input type="text" value="{{team.mail}}"  name="mail" class="form-control" placeholder="Edad del jugador"/>
+                        </div>
+                        <div id="inputBox">
+                            <label>Fecha de creacion del Equipo</label>
+                             <input type="text" value="{{team.creation_date}}"  name="creation_date" class="form-control" placeholder="Edad del jugador"/>
+                        </div>
+                        <div id="inputBox">
+                            <label>Color pricipal Equipo</label>
+                             <input type="text" value="{{team.main_color}}"  name="main_color" class="form-control" placeholder="Edad del jugador"/>
+                        </div>
+                        <div id="inputBox">
+                            <label>Color secundario Equipo</label>
+                             <input type="text" value="{{team.secondary_color}}"  name="secondary_color" class="form-control" placeholder="Edad del jugador"/>
+                        </div>
+                        <div id="inputBox">
+                            <label>Nuevo celular del Equipo</label>
+                             <input type="text" value="{{team.phone}}"  name="phone" class="form-control" placeholder="Edad del jugador"/>
                         </div>
                         <div id="inputBox">
                             <input type="submit" value="Guardar"/>
