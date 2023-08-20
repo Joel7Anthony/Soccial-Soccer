@@ -81,11 +81,7 @@ app.use(require('./routes'));
 app.use(require('./routes/authentication.routes'));
 app.use('/users',require('./routes/users.routes'));
 app.use('/teams',require('./routes/teams.routes'));
-<<<<<<< HEAD
-app.use('/players',require('./routes/players.routes'));
-=======
 app.use('/keys',require('./routes/keys.routes'));
->>>>>>> 78ad00f7dc1e51110fa523cbe5371afe92ce53a6
 
 
 

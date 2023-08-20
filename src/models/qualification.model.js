@@ -1,5 +1,5 @@
-const qualificationOctavos = (sequelize, type) => {
-    return sequelize.define('qualificationOctavos', {
+const qualifications = (sequelize, type) => {
+    return sequelize.define('qualifications', {
         id: {
             type: type.INTEGER,
             primaryKey: true,
@@ -13,12 +13,12 @@ const qualificationOctavos = (sequelize, type) => {
         Time: type.STRING,
 
 
-        creatQualificationFourths: {
+        creatQualifications: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updateQualificationFourths: {
+        updateQualifications: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -28,4 +28,4 @@ const qualificationOctavos = (sequelize, type) => {
     })
 }
 
-module.exports = router;
+module.exports = qualifications;
