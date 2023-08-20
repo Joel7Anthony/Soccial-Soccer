@@ -1,5 +1,5 @@
 const qualificationOctavos = (sequelize, type) => {
-    return sequelize.define('players', {
+    return sequelize.define('qualificationOctavos', {
         id: {
             type: type.INTEGER,
             primaryKey: true,
