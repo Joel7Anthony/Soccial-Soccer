@@ -41,6 +41,7 @@ Teams.getTeam = async (req, res) => {
   
 };
 
+//se mostrara actualizado en la lista//
 Teams.updateTeam = async (req, res) => {
   const { id } = req.params;
   const { name, photo, category, series, initials, description, mail, creation_date, main_color, secondary_color, phone

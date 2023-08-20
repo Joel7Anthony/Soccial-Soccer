@@ -5,6 +5,7 @@ const teams = (sequelize, type) => {
             primaryKey: true,
             autoIncrement: true,
         },
+        name_president: type.STRING,
         name: type.STRING,
         photo: type.STRING,
         category: type.STRING,
