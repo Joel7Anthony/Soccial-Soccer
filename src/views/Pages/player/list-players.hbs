@@ -1,0 +1,22 @@
+
+<link rel="stylesheet" href="/css/cards.css">
+{{#each players }}
+<div class="card-body">
+    <p>{{name}}</p>
+    <p>{{lastname}}</p>
+    <p>{{photo}}</p>
+    <p>{{age}}</p>
+    <p>{{cedula}}</p>
+    <p>{{typePlayer}}</p>
+    <p>{{goalsMarked}}</p>
+   
+        <center>
+        <a href="/players/delete-players/{{id}}" class="danger">Eliminar</a>
+        <a href="/players/edit-player/{{id}}" class="secondary">Editar</a>
+    </center>
+</div>    
+    {{else}}
+    <center <p>No hay registro guardados a un </p>
+        <a href="/players"> Agrega uno haciendo click aqui</a>
+    </center>
+    {{/each}}

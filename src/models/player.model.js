@@ -9,7 +9,7 @@ const players = (sequelize, type) => {
         lastname:type.STRING,
         photo: type.STRING,
         age: type.INTEGER, 
-        cedula: type.STRING,
+        cedula: type.INTEGER,
         typePlayer: type.STRING,
         goalsMarked:type.INTEGER, 
 

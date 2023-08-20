@@ -1,7 +1,5 @@
-const router = require("../routes")
-
-const qualifications = (sequelize, type) => {
-    return sequelize.define('qualifications', {
+const qualificationOctavos = (sequelize, type) => {
+    return sequelize.define('qualificationOctavos', {
         id: {
             type: type.INTEGER,
             primaryKey: true,
