@@ -1,18 +1,24 @@
-const semifinales = (sequelize, type) => {
-    return sequelize.define('semifinales', {
+const qualifications = (sequelize, type) => {
+    return sequelize.define('qualifications', {
         id: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        status: type.STRING,
+        name: type.STRING,
+        nameTeam1: type.STRING,
+        nameTeam2: type.STRING,
+        neighborhoodLeague: type.STRING,
+        Date: type.STRING,
+        Time: type.STRING,
 
-        createSemifinales: {
+
+        creatQualificationFourths: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updateSemifinales: {
+        updateQualificationFourths: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -22,4 +28,4 @@ const semifinales = (sequelize, type) => {
     })
 }
 
-module.exports =semifinales
+module.exports = qualificationFourths

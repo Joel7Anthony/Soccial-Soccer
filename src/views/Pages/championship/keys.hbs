@@ -1,2 +1,31 @@
+{{! Si el usuario está logueado}}
 {{#if user}}
 <link rel="stylesheet" href="/css/keys.css">
+<style>
+  @import
+  url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+</style>
+  <div id="logo"></div>
+  <div id="title">Agregar</div>
+  <div id="sub-title">Cuadrangular</div>
+  <div id="input"></div>
+    <div id="inputBox">
+        <option value="selecionar equipo XD">Selecciona Equipo Clasificad</option>
+        <select id="country" name="country" class="btn btn-secondary col-12" required>
+        <option value="selecionar equipo XD">Selecciona Equipo </option>
+        {{#each teams}}
+                <option value="{{name}}">{{name}}</option>
+        {{/each}}        
+        </select>
+        <option value="selecionar equipo XD">Selecciona Equipo Clasificad</option>
+        <select id="country" name="country" class="btn btn-secondary col-12" required>
+         <option value="selecionar equipo XD">Selecciona Equipo </option>
+        {{#each teams}}
+                <option value="{{name}}">{{name}}</option>
+        {{/each}}        
+        </select>
+    </div>
+  </div>
+  {{else}}
+    <h1>logueate papu XD</h1>
+    {{/if}}

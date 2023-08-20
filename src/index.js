@@ -81,7 +81,7 @@ app.use(require('./routes'));
 app.use(require('./routes/authentication.routes'));
 app.use('/users',require('./routes/users.routes'));
 app.use('/teams',require('./routes/teams.routes'));
-
+app.use('/keys',require('./routes/keys.routes'));
 
 
 
