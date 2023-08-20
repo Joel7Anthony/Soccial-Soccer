@@ -18,6 +18,7 @@ const usersModel = require('../models/user.model');
 const playersModel = require('../models/player.model');
 const teamsModel = require('../models/team.model');
 const leagueRegularsModel = require('../models/leagueRegular.model');
+const qualificationsModel = require('../models/qualification.model');
 
 
 const sequelize = new Sequelize(
@@ -55,6 +56,7 @@ const users = usersModel(sequelize, Sequelize);
 const teams = teamsModel(sequelize, Sequelize);
 const players = playersModel(sequelize, Sequelize);
 const leagueRegulars = leagueRegularsModel(sequelize, Sequelize);
+const qualifications = qualificationsModel(sequelize, Sequelize);
 
 
 
@@ -69,11 +71,22 @@ teams.belongsTo(users);
 users.hasMany(leagueRegulars);
 leagueRegulars.belongsTo(users);
 
+users.hasMany(qualifications);
+qualifications.belongsTo(users);
+
 teams.hasMany(leagueRegulars);
 leagueRegulars.belongsTo(teams);
 
 teams.hasMany(players);
 players.belongsTo(teams);
+
+teams.hasMany(qualifications);
+qualifications.belongsTo(teams);
+
+leagueRegulars.hasMany(qualifications);
+qualifications.belongsTo(leagueRegulars);
+
+
 
 ;
 
@@ -81,6 +94,7 @@ module.exports = {
   users,
   teams,
   players, 
+  qualifications
  //Exportamos los modelos para usarlo en otros archivos
 
 }
