@@ -10,7 +10,7 @@ Teams.getListTeams = async (req, res) => {
 };
 
 Teams.getAddTeams = async (req, res) => {
-  res.render('pages/team/teams')
+  res.render('Pages/team/teams')
 };
 
 Teams.postTeam = async (req, res) => {
@@ -33,12 +33,14 @@ Teams.postTeam = async (req, res) => {
     res.redirect("/teams/list-teams");
     };
 
+//actualizar//
 Teams.getTeam = async (req, res) => {
   const { id } = req.params;
   const team = await pool.query('SELECT * FROM teams WHERE id = ?', [id]);
-  res.render('page/team/edit-teams', {team: team[0]});
+  res.render('Pages/team/edit-teams', {team: team[0]});
   
 };
+
 Teams.updateTeam = async (req, res) => {
   const { id } = req.params;
   const { name, photo, category, series, initials, description, mail, creation_date, main_color, secondary_color, phone

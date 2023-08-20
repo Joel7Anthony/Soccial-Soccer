@@ -11,7 +11,6 @@ router.get('/list-teams', isLoggedIn,teamsController.getListTeams);
 router.get('/delete-teams', isLoggedIn,teamsController.deleteTeam);
 router.get('/edit-teams/:id', isLoggedIn,teamsController.getTeam);
 router.post('/edit-teams/:id', isLoggedIn,teamsController.updateTeam);
-//router.post('/update-teams/:id', isLoggedIn,teamsController.updateTeam);
 
 
 module.exports = router;
