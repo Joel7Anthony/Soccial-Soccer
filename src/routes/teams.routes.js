@@ -8,7 +8,7 @@ router.get('/', isLoggedIn, teamsController.getListTeams);
 router.post('/teams', isLoggedIn,teamsController.postTeam);
 router.get('/add', isLoggedIn, teamsController.getAddTeams);
 router.get('/list-teams', isLoggedIn,teamsController.getListTeams);
-router.get('/delete-teams', isLoggedIn,teamsController.deleteTeam);
+router.get('/delete-teams/:id', isLoggedIn,teamsController.deleteTeam);
 router.get('/edit-teams/:id', isLoggedIn,teamsController.getTeam);
 router.post('/edit-teams/:id', isLoggedIn,teamsController.updateTeam);
 
