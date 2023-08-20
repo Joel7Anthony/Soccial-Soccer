@@ -1,15 +1,27 @@
 const pool = require("../config/database");
-const users = require("../models/qualificationOctovo.model", "");
+const keys = require("../models/qualification.model");
 const { isLoggedIn } = require('../lib/auth');
+const teams = require("../models/team.model");
 const Keys = {};
 
 
 
-Keys.getKeys =  async(req, res) => {
+/*Keys.getKeys =  async(req, res) => {
     //res.render("pages/users/list");
     const keys = await pool.query('SELECT * FROM  keys');  
     res.render('pages/championship/keys', {keys})
-};
+};*/
+
+Keys.getListTeams = async (req, res) => {
+    const teams = await pool.query('SELECT * FROM  teams');
+      res.render('Pages/team/list-teams', {teams});
+  };
+
+
+  Keys.getAddTeams = async (req, res) => {
+    const teams = await pool.query('SELECT * FROM  teams');
+      res.render('Pages/championship/keys', {teams});  
+    };
 
 /*Keys.postKey = async (req, res) => {
     const { name, email, description } = req.body;
@@ -29,27 +41,6 @@ Keys.deleteKey = async (req, res) => {
     req.flash('success', 'Eliminado');
     res.redirect("/users/list-users");
 };*/
-
-Keys.getKey = async (req, res) => {
-    const { id } = req.params;
-    const user = await pool.query('SELECT * FROM users WHERE id = ?', [id]);
-    req.flash('success', 'bien');
-    res.render('pages/users/edit', { user: user[0] });
-};
-Keys.updateKey = async (req, res) => {
-    const { id } = req.params;
-    const { name, email, description } = req.body;
-    const newUser = {
-        name, email, description
-    };
-    await pool.query("UPDATE users set ? WHERE id = ?", [newUser, id]);
-    req.flash('success', 'Actualizado');
-    res.redirect('/users/list-users');
-};
-
-
-
-
 
 module.exports = Keys;
 

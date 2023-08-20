@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/css/teams.css">
+            <div class="card-body">
+                    <form action="/teams/edit-team/{{team.id}}" method="POST">
+                    <div id="logo"></div>
+                    <div id="title">Crear</div>
+                    <div id="sub-title">Equipo a ser agregado</div>
+                    <div id="input">
+                        <div id="inputBox">
+                            <label>Nombre del Equip</label>
+                             <input type="text" value="{{team.name}}" name="name" class="form-control"
+                                placeholder="Nombre del Equipo"/>
+                        </div>
+                        <div id="inputBox">
+                            <label>Foto del Equipo</label>
+                            <input type="text" value="{{team.photo}}" name="photo" class="form-control"
+                                placeholder="Apellido del jugador"/>
+                        </div>
+                         <div id="inputBox">
+                            <label>Posición del Jugador</label>
+                            <input type="text" value="{{player.playerposition}}" class="form-control" name="playerposition"
+                                placeholder="Posición del Jugador" autofocus/>
+                        </div>
+                         <div id="inputBox">
+                            <label>Altura del jugador</label>
+                            <input type="text" value="{{player.playerheight}}" name="playerheight" class="form-control"
+                                placeholder="Altura del jugador"/>
+                        </div>
+                         <div id="inputBox">
+                            <label>Edad del jugador</label>
+                             <input type="text" value="{{player.playerage}}"  name="playerage" class="form-control" placeholder="Edad del jugador"/>
+                        </div>
+                        <div id="inputBox">
+                            <input type="submit" value="Guardar"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
