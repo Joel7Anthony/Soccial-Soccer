@@ -17,11 +17,8 @@ mysql.createConnection({
 const usersModel = require('../models/user.model');
 const playersModel = require('../models/player.model');
 const teamsModel = require('../models/team.model');
-const qualificationOctavosModel = require('../models/qualificationOctovo.model');
 const leagueRegularsModel = require('../models/leagueRegular.model');
-const qualificationFourthsModel = require('../models/qualificationFourth.model');
-const semifinalesModel = require('../models/semifinal.model');
-const finalesModel = require('../models/final.model');
+
 
 const sequelize = new Sequelize(
   'social_soccer_public',
@@ -58,10 +55,7 @@ const users = usersModel(sequelize, Sequelize);
 const teams = teamsModel(sequelize, Sequelize);
 const players = playersModel(sequelize, Sequelize);
 const leagueRegulars = leagueRegularsModel(sequelize, Sequelize);
-const qualificationOctavos = qualificationOctavosModel(sequelize, Sequelize);
-const qualificationFourths = qualificationFourthsModel(sequelize, Sequelize);
-const semifinales = semifinalesModel(sequelize, Sequelize);
-const finales = finalesModel(sequelize, Sequelize);
+
 
 
 //Relaciones 
@@ -75,44 +69,18 @@ teams.belongsTo(users);
 users.hasMany(leagueRegulars);
 leagueRegulars.belongsTo(users);
 
-users.hasMany(qualificationOctavos);
-qualificationOctavos.belongsTo(users);
-
-users.hasMany(qualificationFourths);
-qualificationFourths.belongsTo(users);
-
-users.hasMany(semifinales);
-semifinales.belongsTo(users);
-
-users.hasMany(finales);
-finales.belongsTo(users);
-
 teams.hasMany(leagueRegulars);
 leagueRegulars.belongsTo(teams);
 
 teams.hasMany(players);
 players.belongsTo(teams);
 
-teams.hasMany(qualificationOctavos);
-qualificationOctavos.belongsTo(teams);
-
-teams.hasMany(qualificationFourths);
-qualificationFourths.belongsTo(teams);
-
-teams.hasMany(semifinales);
-semifinales.belongsTo(teams);
-
-teams.hasMany(finales);
-finales.belongsTo(teams);
+;
 
 module.exports = {
   users,
   teams,
   players, 
-  qualificationOctavos,
-  leagueRegulars,
-  qualificationFourths,
-  semifinales, 
-  finales //Exportamos los modelos para usarlo en otros archivos
+ //Exportamos los modelos para usarlo en otros archivos
 
 }

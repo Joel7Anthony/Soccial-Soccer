@@ -1,3 +1,5 @@
+const router = require("../routes")
+
 const qualifications = (sequelize, type) => {
     return sequelize.define('qualifications', {
         id: {
@@ -28,4 +30,4 @@ const qualifications = (sequelize, type) => {
     })
 }
 
-module.exports = qualificationFourths
+module.exports = router;
