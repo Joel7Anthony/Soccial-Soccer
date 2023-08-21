@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const teamsController = require('../controllers/teams.controller');
 const { isLoggedIn } = require('../lib/auth');
+const photoTeamsController = require('../controllers/photoTeams.controller')
 
 
 router.get('/', isLoggedIn, teamsController.getListTeams);
@@ -14,7 +15,7 @@ router.post('/edit-teams/:id', isLoggedIn,teamsController.updateTeam);
 
 //views profile
 
-//router.get('/profile', isLoggedIn, profileController.getProfile);
+router.post('/photo-team/:id', isLoggedIn, photoTeamsController.updatePhoto);
 //router.post('/image-profile', isLoggedIn, profileController.postImageProfile);
 //router.post('/update-profile', isLoggedIn, profileController.updateImageProfile );
 

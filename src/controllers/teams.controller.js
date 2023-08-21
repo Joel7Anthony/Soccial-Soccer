@@ -15,10 +15,10 @@ Teams.getAddTeams = async (req, res) => {
 
 Teams.postTeam = async (req, res) => {
     const {
-        name, photo, category, series, initials, description, mail, creation_date, main_color, secondary_color, phone
+      name_president,  name, category, series, initials, description, mail, creation_date, main_color, secondary_color, phone
     } = req.body;
     const newLink = {
-        name, photo, category, series, initials, description, mail, creation_date, main_color, secondary_color, phone
+      name_president, name, category, series, initials, description, mail, creation_date, main_color, secondary_color, phone
     };
     await pool.query('INSERT INTO teams set ?', [newLink]);
      //Flash
@@ -44,9 +44,9 @@ Teams.getTeam = async (req, res) => {
 //se mostrara actualizado en la lista//
 Teams.updateTeam = async (req, res) => {
   const { id } = req.params;
-  const { name, photo, category, series, initials, description, mail, creation_date, main_color, secondary_color, phone
+  const { name_president,name, category, series, initials, description, mail, creation_date, main_color, secondary_color, phone
   } = req.body;
-  const newLink = { name, photo, category, series, initials, description, mail, creation_date, main_color, secondary_color, phone
+  const newLink = {name_president, name, category, series, initials, description, mail, creation_date, main_color, secondary_color, phone
       
   };
   console.log ({ id, newLink})  
