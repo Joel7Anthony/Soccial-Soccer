@@ -17,13 +17,13 @@ Players.postPlayer= async (req, res) => {
     };
     await pool.query('INSERT INTO players set ?', [newLink]);
      //Flash
-    req.flash('success','Agregado Correctamenta');
+    req.flash('success','Jugador agregado Correctamenta');
     res.redirect("/players/list-players");
   };
   Players.deletePlayer = async(req, res) =>{
     const { id } = req.params;
     await pool.query("DELETE FROM players WHERE ID = ?", [id]);
-    req.flash('success','Eliminado correctamente');
+    req.flash('success','Jugador Eliminado correctamente');
     res.redirect("/players/list-players");
     };
 
@@ -42,7 +42,7 @@ Players.updatePlayer = async (req, res) => {
   };
   console.log ({ id, newLink})  
   await pool.query('UPDATE players set ? WHERE id = ?', [newLink, id]);
-  req.flash('success','Editado Correctamenta');  
+  req.flash('success','Jugador editado Correctamenta');  
   res.redirect('/players/list-players');
 };
 

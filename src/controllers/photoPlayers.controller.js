@@ -21,7 +21,7 @@ photoPlayer.updatePhoto = async (req, res) => {
     sampleFile.mv(uploadPath, function (err) {
         if (err) return res.status(500).send(err);
         pool.query('UPDATE players SET photo = ? WHERE id = ?', [sampleFile.name, id])
-        req.flash('success', 'Imagen actualizado');
+        req.flash('success', 'Foto agregada actualizado');
         res.redirect('/players');
 
     });
