@@ -16,10 +16,6 @@
       <label>Apellido del jugador</label>
       <input type="text" name="lastname" class="form-control" placeholder="Apellido del jugador" />
     </div>
-     <div id="inputBox">
-      <label>Foto</label>
-      <input type="text" name="photo" class="form-control" placeholder="Foto del jugador" />
-    </div>
     <div id="inputBox">
       <label>Edad del jugador</label>
       <input type="text" name="age" class="form-control" placeholder="Edad del jugador" />
@@ -33,6 +29,16 @@
       <label>Posición del Jugador</label>
       <input type="text" class="form-control" name="typePlayer" placeholder="Posición del Jugador" />
     </div>
+
+      <option value="selecionar equipo XD">Selecciona el segundo equipo clasificado</option>
+        <select id="country" name="country" class="btn btn-secondary col-12" required>
+         <option value="selecionar equipo XD">Segundo equipo clasificado </option>
+        {{#each teams}}
+                <option value="{{name}}">{{name}}</option>
+        {{/each}}        
+        </select>
+
+
     <div id="inputBox">
       <label>Goles Marcados</label>
       <input type="text" name="goalsMarked" class="form-control" placeholder="Goles del jugador" />

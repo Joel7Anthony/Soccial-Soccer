@@ -90,6 +90,8 @@ app.use('/players', require('./routes/players.routes'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/images/img-profile')));
 app.use(express.static(path.join(__dirname, 'public/images/img-team')));
+app.use(express.static(path.join(__dirname, 'public/images/img-profile')));
+app.use(express.static(path.join(__dirname, 'public/images/img-player')));
 
 
 

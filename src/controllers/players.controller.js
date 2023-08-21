@@ -1,22 +1,19 @@
 const pool = require("../config/database");
+const keys = require("../keys");
 const players = require("../models/player.model");
 const Players = {};
-
+const Teams = {};
 Players.getListPlayers = async (req, res) => {
   const players = await pool.query('SELECT * FROM  players');
     res.render('Pages/player/list-players', {players});
 };
 
-Players.getAddPlayers = async (req, res) => {
-  res.render('pages/player/players')
-};
-
 Players.postPlayer= async (req, res) => {
     const {
-        name,lastname,photo,age,cedula,typePlayer,goalsMarked        
+        name,lastname,age,cedula,typePlayer,goalsMarked        
     } = req.body;
     const newLink = {
-        name,lastname,photo,age,cedula,typePlayer,goalsMarked 
+        name,lastname,age,cedula,typePlayer,goalsMarked 
     };
     await pool.query('INSERT INTO players set ?', [newLink]);
      //Flash
@@ -33,14 +30,14 @@ Players.postPlayer= async (req, res) => {
 Players.getPlayer = async (req, res) => {
   const { id } = req.params;
   const player = await pool.query('SELECT * FROM players WHERE id = ?', [id]);
-  res.render('page/player/edit-players', {player: player[0]});
+  res.render('Pages/player/edit-players', {player: player[0]});
   
 };
 Players.updatePlayer = async (req, res) => {
   const { id } = req.params;
-  const {name,lastname,photo,age,cedula,typePlayer,goalsMarked 
+  const {name,lastname,age,cedula,typePlayer,goalsMarked 
   } = req.body;
-  const newLink = {name,lastname,photo,age,cedula,typePlayer,goalsMarked 
+  const newLink = {name,lastname,age,cedula,typePlayer,goalsMarked 
       
   };
   console.log ({ id, newLink})  
@@ -48,5 +45,11 @@ Players.updatePlayer = async (req, res) => {
   req.flash('success','Editado Correctamenta');  
   res.redirect('/players/list-players');
 };
+
+
+Players.getAddTeams = async (req, res) => {
+  const teams = await pool.query('SELECT * FROM  teams');
+    res.render('Pages/player/players', {teams});  
+  };
 
 module.exports = Players;
