@@ -16,8 +16,7 @@ router.post('/edit-teams/:id', isLoggedIn,teamsController.updateTeam);
 //views profile
 
 router.post('/photo-team/:id', isLoggedIn, photoTeamsController.updatePhoto);
-//router.post('/image-profile', isLoggedIn, profileController.postImageProfile);
-//router.post('/update-profile', isLoggedIn, profileController.updateImageProfile );
+
 
 
 module.exports = router;
