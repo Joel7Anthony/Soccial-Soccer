@@ -9,13 +9,13 @@
 <link rel="stylesheet" href="/css/cards.css">
 {{#each teams}}
 <div class="card-body">
-    {{#if photo}}
+    <p>{{name_president}}</p>
+    <p>{{name}}</p>
+     {{#if photo}}
     <img class="card__image" src="/{{photo}}" loading="lazy" alt="User Profile">
     {{else}}
     <img src="/not-found/not-found-image.png" class="card__image" alt="..." alt="User Profile">
     {{/if}}
-    <p>{{name_president}}</p>
-    <p>{{name}}</p>
     <p>{{series}}</p>
     <p>{{initialst}}</p>
     <p>{{description}}</p>
@@ -41,3 +41,5 @@
 {{else}}
 <h1>logueate papu XD</h1>
 {{/if}}
+
+
