@@ -16,26 +16,32 @@ a {
   width: 25%;
   margin: 20px;
   overflow: hidden;
-  background: rgb(141, 207, 233);
-  box-shadow: 0px 3px 10px rgb(131, 6, 6);
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 3px 10px rgb(255, 0, 0);
   font-size: 20px;
   float: left;
+  border-radius: 15px;
 }
 
 .danger {
   color: black;
   background-color: rgb(219, 42, 42);
-  font-size: 25px;
-  line-height: 100px;
+  font-size: 20px;
+  line-height: 15px;
   width: 87px;
   height: 70px;
 }
 
 .secondary {
   color: black;
-  background-color: rgb(56, 113, 218);
-  font-size: 25px;
+  background-color: rgb(56, 218, 97);
+  font-size: 20px;
   line-height: 50px;
   width: 87px;
   height: 70px;
+}
+
+.color{
+  text-align: center;
+  color: black;
 }

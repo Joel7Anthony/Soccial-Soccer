@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/cards.css">
 <div class="col-md-12" style="margin-bottom: 5px; ">
     <div class="card text-center border border-primary">
         <h3 class="card-title text-uppercase" style="color: rgb(44, 142, 253);">
@@ -5,8 +6,7 @@
         </h3>
     </div>
 </div>
-{{#if user}}
-<link rel="stylesheet" href="/css/cards.css">
+<a class="color" href="/teams/add">Añadir equipo </a>
 {{#each teams}}
 <div class="card-body">
     <p>{{name_president}}</p>
@@ -16,8 +16,9 @@
     {{else}}
     <img src="/not-found/not-found-image.png" class="card__image" alt="..." alt="User Profile">
     {{/if}}
+    <p>{{category}}</p>
     <p>{{series}}</p>
-    <p>{{initialst}}</p>
+    <p>{{initials}}</p>
     <p>{{description}}</p>
     <p>{{mail}}</p>
     <p>{{creation_date}}</p>
@@ -34,12 +35,9 @@
     </center>
 </div>
 {{else}}
-<center <p>No hay registro guardados a un </p>
+<center> <p>No hay registro guardados a un </p>
     <a href="/teams/add"> Agrega uno haciendo click aqui</a>
 </center>
 {{/each}}
-{{else}}
-<h1>logueate papu XD</h1>
-{{/if}}
 
 

@@ -3,8 +3,8 @@
 :root {
     --header-height: 3rem;
     --nav-width: 68px;
-    --first-color: #1259f0;
-    --first-color-light: #AFA5D9;
+    --first-color: #4e5970;
+    --first-color-light: #ffffff;
     --white-color: #ecebeb;
     --body-font: 'Nunito', sans-serif;
     --normal-font-size: 1rem;
@@ -59,7 +59,6 @@ a {
     justify-content: center;
     border-radius: 50%;
     overflow: hidden;
-   
 }
 
 .header_img img {

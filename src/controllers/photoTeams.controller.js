@@ -21,7 +21,7 @@ photoTeam.updatePhoto = async (req, res) => {
     sampleFile.mv(uploadPath, function (err) {
         if (err) return res.status(500).send(err);
         pool.query('UPDATE teams SET photo = ? WHERE id = ?', [sampleFile.name, id])
-        req.flash('success', 'Logo actualizado');
+        req.flash('success', 'Escudo actualizado');
         res.redirect('/teams');
 
     });

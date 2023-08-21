@@ -10,7 +10,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-  
+
     margin-bottom: 1.25rem;
 }
 
@@ -21,12 +21,12 @@
     height: 17rem;
     background-image: linear-gradient(45deg, #000000, #317FFF);
     border-radius: 0 0 20px 20px;
-    
+
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
+
 }
 
 .seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
@@ -198,34 +198,35 @@
 }
 
 .drag-area {
- border: 5px dashed #ddd;
+    border: 5px dashed #ddd;
 
- border-radius: 5px;
- display: flex;
- align-items: center;
- justify-content: center;
- flex-direction: column;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .drag-area.active {
- background-color: #b8d4fe;
- color: black;
- border: 2px dashed #618ac9;
-}
-.drag-area h2 {
- font-size: 30px;
- font-weight: 500;
- color: #000;
-}
-.drag-area input {
- padding: 10px 25px;
- font-size: 20px;
- border: 0;
- outline: none;
- background-color: #5256ad;
- color: white;
- border-radius: 5px;
- cursor: pointer;
- margin: 20px;
+    background-color: #b8d4fe;
+    color: black;
+    border: 2px dashed #618ac9;
 }
 
+.drag-area h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+}
+
+.drag-area input {
+    padding: 10px 25px;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    background-color: #5256ad;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
