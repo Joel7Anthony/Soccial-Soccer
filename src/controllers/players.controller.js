@@ -48,7 +48,7 @@ Players.updatePlayer = async (req, res) => {
 
 
 Players.getAddPlayers = async (req, res) => {
-  const teams = await pool.query('SELECT * FROM  teams');
+  const teams = await pool.query('SELECT * FROM  players');
     res.render('Pages/player/players', {teams});  
   };
 
